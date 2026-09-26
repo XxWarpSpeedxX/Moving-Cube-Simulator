@@ -56,7 +56,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
 
     }
 
-    // Warning Window
+    // Warning Window Name
     JFrame warning = new JFrame("GET BACK NOW");
 
     // Game Timer
@@ -77,22 +77,22 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     boolean sPressed = false;
     boolean dPressed = false;
 
-    // Keeps track of whether warning is already showing
+    // WarningShowing boolean
     boolean warningShowing = false;
 
-    // Game Window
+    // Game Window Name
     JFrame gameWindow = new JFrame("Game");
 
     // Constructor
     public Game() {
 
-        // Game Window
+        // Game Window Setup
         gameWindow.setSize(800, 600);
         gameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameWindow.add(this);
         gameWindow.setVisible(true);
 
-        // Warning Window
+        // Warning Window Setup
         warning.setSize(400, 500);
 
         // Warning Timer
@@ -151,7 +151,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
             playerY + playerW >= 770 ||
             playerY <= 0) {
 
-            // Only show warning if it isn't already showing
+            // Warning Show
             if (!warningShowing) {
 
                 warningShowing = true;
